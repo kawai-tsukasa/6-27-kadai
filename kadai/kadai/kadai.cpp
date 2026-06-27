@@ -5,16 +5,21 @@
 
 using namespace std;
 
+
+
 class Rand
 {
 public:
-	void randNam(int a, int b, int c, int d);
+	int num;
 
+	void Randnum();
 };
 
-void Rand::randNam(int a, int b, int c, int d) 
+void Rand::Randnum()
 {
-	cout << a << b << c << d << endl;
+	int t = (int)time(NULL);
+	int num = t %  10;
+	
 }
 
 class Input 
@@ -22,10 +27,10 @@ class Input
 public:
 	void input()
 	{
-		 static int Ansinput;
+		 static int Ans;
 		 
 	     cout << "4桁の数字を入力してね" << endl;
-		 cin >> Ansinput;
+		 cin >> Ans;
 	}
 };
 
@@ -41,16 +46,9 @@ class Chack
 
 int main()
 {
-	int i = (int)time(NULL);
-	int a = i % 10;
-	int b = i % 10;
-	int c = i % 10;
-	int d = i % 10;
+	Rand;
+	
 
-	Rand();
-
-	Input();
-	return 0;
 }
 
 
